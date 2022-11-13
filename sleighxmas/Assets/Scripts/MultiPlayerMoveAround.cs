@@ -6,6 +6,8 @@ public class MultiPlayerMoveAround : MonoBehaviour{
 
       //public Animator anim;
       //public AudioSource WalkSFX;
+      public int jumpcount = 0;
+      public int maxJumpCount = 1;
       public Rigidbody2D rb2D;
       private bool FaceRight = true; // determine which way player is facing.
       public static float runSpeed = 10f;
@@ -13,6 +15,7 @@ public class MultiPlayerMoveAround : MonoBehaviour{
       public bool isAlive = true;
       public bool isPlayer1 =false;
       public Vector3 hvMove;
+      public float jumpforce = 10f;
 
       void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
@@ -47,6 +50,11 @@ public class MultiPlayerMoveAround : MonoBehaviour{
                         playerTurn();
                   }
             }
+            if (Input.GetKeyDown(KeyCode.Space) && (jumpcount > 0))
+                {
+                    rb2D.AddForce(Vector3.up * jumpforce,ForceMode2D.Impulse);
+                    jumpcount -= 1;
+                }
       }
 
       private void playerTurn(){
@@ -58,5 +66,13 @@ public class MultiPlayerMoveAround : MonoBehaviour{
             theScale.x *= -1;
             transform.localScale = theScale;
       }
+
+      void OnCollisionEnter2D(Collision2D Col)
+     {
+         if (Col.gameObject.tag == "ground")
+         {
+         jumpcount = maxJumpCount;
+         }
+    }
 
 }
