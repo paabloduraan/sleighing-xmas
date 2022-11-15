@@ -71,8 +71,13 @@ public class MultiPlayerMoveAround : MonoBehaviour{
      {
          if (Col.gameObject.tag == "ground")
          {
-         jumpcount = maxJumpCount;
+            jumpcount = maxJumpCount;
          }
+
+        if (Col.gameObject.tag == "gifts") {
+            Destroy(Col.gameObject);
+            gameObject.GetComponent<AudioSource>().Play();
+        }
     }
 
 }
