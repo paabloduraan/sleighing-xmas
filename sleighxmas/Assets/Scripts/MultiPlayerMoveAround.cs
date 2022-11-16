@@ -55,6 +55,16 @@ public class MultiPlayerMoveAround : MonoBehaviour{
                     rb2D.AddForce(Vector3.up * jumpforce,ForceMode2D.Impulse);
                     jumpcount -= 1;
                 }
+            if (Input.GetKeyDown(KeyCode.W) && (jumpcount > 0) && isPlayer1)
+                {
+                    rb2D.AddForce(Vector3.up * jumpforce,ForceMode2D.Impulse);
+                    jumpcount -= 1;
+                }
+            if (Input.GetKeyDown(KeyCode.UpArrow) && (jumpcount > 0) && !isPlayer1)
+                {
+                    rb2D.AddForce(Vector3.up * jumpforce,ForceMode2D.Impulse);
+                    jumpcount -= 1;
+                }
       }
 
       private void playerTurn(){
