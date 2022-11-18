@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour{
 
       public GameObject target;
-      public float camSpeed = 4.0f;
+      public float camSpeed = 10.0f;
 
       void FixedUpdate () {
             Vector2 pos = Vector2.Lerp ((Vector2)transform.position, (Vector2)target.transform.position, camSpeed * Time.fixedDeltaTime);
