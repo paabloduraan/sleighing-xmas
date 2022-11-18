@@ -745,7 +745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749523015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6200872, y: 1.8040262, z: -9.71652}
+  m_LocalPosition: {x: 6.13, y: -1.26, z: -9.71652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1350,6 +1350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589454549}
+  - component: {fileID: 1589454550}
   m_Layer: 0
   m_Name: CameraManager
   m_TagString: Untagged
@@ -1372,6 +1373,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589454550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589454547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c27d716d24e64ef8986ba4aef1e6e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraMain: {fileID: 1290573384}
+  cameraPlayer1: {fileID: 2087903578}
+  cameraPlayer2: {fileID: 749523015}
+  player1: {fileID: 1470281840}
+  player2: {fileID: 1734001193}
+  cameraDistance: 1
 --- !u!50 &1637719712 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 7781566256707147112, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
@@ -1876,7 +1895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087903578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6200872, y: 1.8040262, z: -9.71652}
+  m_LocalPosition: {x: -2.44, y: 4.58, z: -9.71652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
