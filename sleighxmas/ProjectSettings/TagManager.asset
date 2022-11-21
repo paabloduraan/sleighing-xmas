@@ -8,6 +8,7 @@ TagManager:
   - gifts
   - icicle
   - CheckPoint
+  - GameHandler
   layers:
   - Default
   - TransparentFX
