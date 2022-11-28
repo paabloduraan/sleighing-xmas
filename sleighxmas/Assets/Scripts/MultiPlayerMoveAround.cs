@@ -16,10 +16,14 @@ public class MultiPlayerMoveAround : MonoBehaviour{
       public bool isPlayer1 =false;
       public Vector3 hvMove;
       public float jumpforce = 10f;
+      public GameHandler gameHandlerObj;
 
       void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+            if (GameObject.FindWithTag("GameHandler") != null) {
+                gameHandlerObj = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
+            }
       }
 
       void Update(){
@@ -87,6 +91,7 @@ public class MultiPlayerMoveAround : MonoBehaviour{
         if (Col.gameObject.tag == "gifts") {
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
+            gameHandlerObj.AddScore(1);
         }
     }
 

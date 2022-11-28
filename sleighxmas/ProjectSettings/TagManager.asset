@@ -9,6 +9,7 @@ TagManager:
   - icicle
   - CheckPoint
   - GameHandler
+  - GameHandler1
   layers:
   - Default
   - TransparentFX
