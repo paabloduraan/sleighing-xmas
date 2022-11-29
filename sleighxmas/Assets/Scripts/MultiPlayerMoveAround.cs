@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MultiPlayerMoveAround : MonoBehaviour{
 
@@ -82,6 +83,10 @@ public class MultiPlayerMoveAround : MonoBehaviour{
             transform.localScale = theScale;
       }
 
+      public void EndGame() {
+            SceneManager.LoadScene("EndPage");
+      }
+
       void OnCollisionEnter2D(Collision2D Col)
      {
          if (Col.gameObject.tag == "ground")
@@ -93,6 +98,11 @@ public class MultiPlayerMoveAround : MonoBehaviour{
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
             gameHandlerObj.AddScore(1);
+        }
+
+        if (Col.gameObject.tag == "tree")
+        {
+           EndGame();
         }
     }
 
