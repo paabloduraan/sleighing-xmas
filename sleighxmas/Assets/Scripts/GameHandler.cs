@@ -83,4 +83,12 @@ public class GameHandler : MonoBehaviour
           Application.Quit();
           #endif
       }
+      
+    public void StartGame() {
+          SceneManager.LoadScene("Level1");
+    }
+
+    public void EndGame() {
+          SceneManager.LoadScene("EndPage");
+    }
 }
