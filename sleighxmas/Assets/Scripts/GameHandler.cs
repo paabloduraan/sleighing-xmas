@@ -63,7 +63,7 @@ public class GameHandler : MonoBehaviour
                // Add commands to zero-out any scores or other stats before restarting
                SceneManager.LoadScene("Level1");
     }
-     
+
     void Pause(){
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
@@ -83,7 +83,7 @@ public class GameHandler : MonoBehaviour
           Application.Quit();
           #endif
       }
-      
+
     public void StartGame() {
           SceneManager.LoadScene("Level1");
     }
