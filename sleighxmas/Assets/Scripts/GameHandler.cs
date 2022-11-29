@@ -12,6 +12,7 @@ public class GameHandler : MonoBehaviour
     private int playerScore = 0;
     public static bool GameisPaused = false;
     public GameObject pauseMenuUI;
+    public int count = 0;
 
 
     void Start()
@@ -35,11 +36,24 @@ public class GameHandler : MonoBehaviour
 
     void Update (){
         if (Input.GetKeyDown(KeyCode.Escape)){
+            count++;
+            Debug.Log(count);
+
+            Debug.Log("escape");
+
                 if (GameisPaused){
+                    Debug.Log("resume1");
+
                         Resume();
+                        Debug.Log("resume2");
+
                 }
                 else{
+                    Debug.Log("pause1");
+
                         Pause();
+                        Debug.Log("pause2");
+
                 }
         }
     }
