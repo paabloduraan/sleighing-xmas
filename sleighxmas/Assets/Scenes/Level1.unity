@@ -647,7 +647,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117369607}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1035,7 +1035,6 @@ GameObject:
   m_Component:
   - component: {fileID: 156829949}
   - component: {fileID: 156829950}
-  - component: {fileID: 156829951}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -1070,22 +1069,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324fa55c930b4f41b0bed898bae5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  divider: {fileID: 0}
   scoreText: {fileID: 402727837}
-  pauseMenuUI: {fileID: 1123786230}
-  count: 0
---- !u!114 &156829951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156829948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2324fa55c930b4f41b0bed898bae5340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1366679587}
   pauseMenuUI: {fileID: 1123786230}
   count: 0
 --- !u!1 &157225035
@@ -4723,7 +4708,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117369607}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7850,7 +7835,7 @@ RectTransform:
   - {fileID: 44969144}
   - {fileID: 1582241597}
   m_Father: {fileID: 2117369607}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9360,7 +9345,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117369607}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.008312499, y: 0.015327414}
   m_AnchorMax: {x: 0.008312499, y: 0.015327414}
@@ -10217,6 +10202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c27d716d24e64ef8986ba4aef1e6e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  divider: {fileID: 0}
   cameraMain: {fileID: 421792546}
   cameraPlayer1: {fileID: 263453091}
   cameraPlayer2: {fileID: 441450343}
@@ -13774,10 +13760,10 @@ RectTransform:
   - {fileID: 718847582}
   - {fileID: 1948603042}
   - {fileID: 402727838}
-  - {fileID: 1123786231}
   - {fileID: 667645972}
   - {fileID: 1366679588}
   - {fileID: 82285962}
+  - {fileID: 1123786231}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

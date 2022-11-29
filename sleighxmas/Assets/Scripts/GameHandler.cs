@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour
 {
 
+    public GameObject divider;
     public GameObject scoreText;
     private int playerScore = 0;
     public static bool GameisPaused = false;
@@ -17,7 +18,7 @@ public class GameHandler : MonoBehaviour
 
     void Start()
     {
-        UpdateScore();
+        divider = GameObject.Find("Divider");
         pauseMenuUI.SetActive(false);
         GameisPaused = false;
     }
@@ -37,23 +38,13 @@ public class GameHandler : MonoBehaviour
     void Update (){
         if (Input.GetKeyDown(KeyCode.Escape)){
             Debug.Log(count);
-
-            Debug.Log("escape");
-            Debug.Log("escape1");
-
                 if (GameisPaused){
-                    Debug.Log("resume1");
-
+                        divider.SetActive(true);
                         Resume();
-                        Debug.Log("resume2");
-
                 }
                 else{
-                    Debug.Log("pause1");
-
-                        Pause();
-                        Debug.Log("pause2");
-
+                    divider.SetActive(false);
+                    Pause();
                 }
         }
     }
