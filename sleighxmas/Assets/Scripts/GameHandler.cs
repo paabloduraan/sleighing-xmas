@@ -36,10 +36,10 @@ public class GameHandler : MonoBehaviour
 
     void Update (){
         if (Input.GetKeyDown(KeyCode.Escape)){
-            count++;
             Debug.Log(count);
 
             Debug.Log("escape");
+            Debug.Log("escape1");
 
                 if (GameisPaused){
                     Debug.Log("resume1");
