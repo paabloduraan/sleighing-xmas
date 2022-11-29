@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraManager_SplitScreen : MonoBehaviour{
 
-      // public GameObject divider;
+      public GameObject divider;
       public GameObject cameraMain;
       public GameObject cameraPlayer1;
       public GameObject cameraPlayer2;
@@ -12,8 +12,12 @@ public class CameraManager_SplitScreen : MonoBehaviour{
       public GameObject player2;
       public float cameraDistance = 5f;
 
+      void Start() {
+          divider = GameObject.Find("Divider");
+
+      }
+      
       void Update(){
-            // divider = GameObject.Find("Divider");
             FindPlayerCenter(); //the GameHandler acts as the target for the MainCamera
 
             float playerDistance = Vector3.Distance(player1.transform.position, player2.transform.position); //get distance
@@ -21,9 +25,8 @@ public class CameraManager_SplitScreen : MonoBehaviour{
             if (playerDistance < cameraDistance){
                   cameraPlayer1.GetComponent<Camera>().enabled = false;
                   cameraPlayer2.GetComponent<Camera>().enabled = false;
-                  // if (divider != null) {
-                  //     turnOnDivider(divider);
-                  // }
+                  divider.SetActive(false);
+                  
                   
                   cameraMain.GetComponent<Camera>().enabled = true;
             }
@@ -31,18 +34,11 @@ public class CameraManager_SplitScreen : MonoBehaviour{
             else {
                   cameraPlayer1.GetComponent<Camera>().enabled = true;
                   cameraPlayer2.GetComponent<Camera>().enabled = true;
-                  // turnOffDivider(divider);
+                  divider.SetActive(true);
                   cameraMain.GetComponent<Camera>().enabled = false;
             }
       }
-      // 
-      // void turnOnDivider(GameObject object) {
-      //     object.SetActive(true);
-      // }
-      // 
-      // void turnOffDivider(GameObject object) {
-      //     object.SetActive(false);
-      // }
+
 
       // set this object's position to the center of the two players
       void FindPlayerCenter(){
