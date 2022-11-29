@@ -54,7 +54,8 @@ public class MultiPlayerMoveAround : MonoBehaviour{
                         playerTurn();
                   }
             }
-            if (Input.GetKeyDown(KeyCode.Space) && (jumpcount > 0))
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("B-xbox"))
+                    && (jumpcount > 0))
                 {
                     rb2D.AddForce(Vector3.up * jumpforce,ForceMode2D.Impulse);
                     jumpcount -= 1;
