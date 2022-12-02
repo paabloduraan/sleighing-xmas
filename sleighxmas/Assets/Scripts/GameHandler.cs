@@ -9,7 +9,9 @@ public class GameHandler : MonoBehaviour
 {
 
     public GameObject scoreText;
+    public GameObject scoreText2;
     private int playerScore = 0;
+    private int playerScore2 = 0;
     public static bool GameisPaused = false;
     public GameObject pauseMenuUI;
     public int count = 0;
@@ -18,6 +20,7 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         UpdateScore();
+        UpdateScore2();
         pauseMenuUI.SetActive(false);
         GameisPaused = false;
     }
@@ -32,6 +35,18 @@ public class GameHandler : MonoBehaviour
     {
         Text scoreTextB = scoreText.GetComponent<Text>();
         scoreTextB.text = "" + playerScore;
+    }
+
+    public void AddScore2(int points)
+    {
+        playerScore2 += points;
+        UpdateScore2();
+    }
+
+    void UpdateScore2()
+    {
+        Text scoreTextB = scoreText2.GetComponent<Text>();
+        scoreTextB.text = "" + playerScore2;
     }
 
     void Update (){

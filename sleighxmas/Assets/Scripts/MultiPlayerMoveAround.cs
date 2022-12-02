@@ -97,7 +97,13 @@ public class MultiPlayerMoveAround : MonoBehaviour{
         if (Col.gameObject.tag == "gifts") {
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
-            gameHandlerObj.AddScore(1);
+            
+            if (gameObject.transform.GetChild(0).CompareTag("grinch")) {
+                gameHandlerObj.AddScore2(1);
+            } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
+                gameHandlerObj.AddScore(1);
+            }
+            
         }
 
         if (Col.gameObject.tag == "tree")
