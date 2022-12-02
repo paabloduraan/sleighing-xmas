@@ -11,6 +11,8 @@ TagManager:
   - GameHandler
   - GameHandler1
   - tree
+  - grinch
+  - santa
   layers:
   - Default
   - TransparentFX

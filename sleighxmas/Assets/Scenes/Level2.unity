@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1366679587}
+  scoreText2: {fileID: 402727837}
   pauseMenuUI: {fileID: 1123786230}
   count: 0
 --- !u!1 &175119309
@@ -1591,6 +1592,10 @@ PrefabInstance:
     - target: {fileID: 9066390563962317502, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_Name
       value: grinchArt
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066390563962317502, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
+      propertyPath: m_TagString
+      value: grinch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
@@ -5865,6 +5870,10 @@ PrefabInstance:
     - target: {fileID: 1103546418772793593, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955164796297464430, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
+      propertyPath: m_TagString
+      value: santa
       objectReference: {fileID: 0}
     - target: {fileID: 7324520660199846300, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
       propertyPath: m_LocalScale.x
