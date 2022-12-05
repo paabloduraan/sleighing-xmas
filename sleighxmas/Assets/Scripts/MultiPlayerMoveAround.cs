@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MultiPlayerMoveAround : MonoBehaviour{
+public class MultiPlayerMoveAround : MonoBehaviour {
 
       //public Animator anim;
       //public AudioSource WalkSFX;
@@ -88,9 +88,8 @@ public class MultiPlayerMoveAround : MonoBehaviour{
       }
 
       void OnCollisionEnter2D(Collision2D Col)
-     {
-         if (Col.gameObject.tag == "ground")
-         {
+      {
+         if (Col.gameObject.tag == "ground") {
             jumpcount = maxJumpCount;
          }
 
@@ -106,10 +105,38 @@ public class MultiPlayerMoveAround : MonoBehaviour{
             
         }
 
-        if (Col.gameObject.tag == "tree")
-        {
+        if (Col.gameObject.tag == "tree") {
            EndGame();
         }
+
+        if (Col.gameObject.tag == "star") {
+            Destroy(Col.gameObject);
+            gameObject.GetComponent<AudioSource>().Play();
+
+            /*
+            if (gameObject.transform.GetChild(0).CompareTag("grinch"))
+            {
+                gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                StartCoroutine(Freeze());
+                StopCoroutine(Freeze());
+            }
+            else if (gameObject.transform.GetChild(0).CompareTag("santa"))
+            {
+                gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                StartCoroutine(Freeze());
+                StopCoroutine(Freeze());
+            }
+            */
+      }
+
+     }
+
+    /*
+    IEnumerator Freeze()
+    {
+        yield return new WaitForSeconds(1f);
+        rb2D.constraints = RigidbodyConstraints2D.None;
     }
+    */
 
 }
