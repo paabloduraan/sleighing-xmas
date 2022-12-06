@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4c532758deb9544f1907456fcb876387
+guid: 337fb5232f66d4ad0acf328828b244e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,12 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fire tile_0
+      name: orange tile corner_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 27
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f6ee048a363e4b4bbccf77e92e3e87d
-      internalID: 2038378657
+      spriteID: 48ef2921e864d4e069802ebb983f9479
+      internalID: -1518616675
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fire tile_0: 2038378657
+      orange tile corner_0: -1518616675
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
