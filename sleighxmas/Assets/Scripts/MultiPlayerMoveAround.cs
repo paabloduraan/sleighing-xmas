@@ -107,6 +107,15 @@ public class MultiPlayerMoveAround : MonoBehaviour {
 
         if (Col.gameObject.tag == "tree") {
             Scene scene = SceneManager.GetActiveScene();
+
+            //add 3 points to whoever reaches tree first
+            if (gameObject.transform.GetChild(0).CompareTag("grinch")) {
+                gameHandlerObj.AddScore2(3);
+            } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
+                gameHandlerObj.AddScore(3);
+            }
+
+            // switch to next scene
             if (scene.name == "Level1")
             {
                 SceneManager.LoadScene("Level2");
