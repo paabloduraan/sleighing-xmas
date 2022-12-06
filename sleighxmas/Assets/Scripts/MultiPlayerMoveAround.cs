@@ -96,17 +96,37 @@ public class MultiPlayerMoveAround : MonoBehaviour {
         if (Col.gameObject.tag == "gifts") {
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
-            
+
             if (gameObject.transform.GetChild(0).CompareTag("grinch")) {
                 gameHandlerObj.AddScore2(1);
             } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
                 gameHandlerObj.AddScore(1);
             }
-            
+
         }
 
         if (Col.gameObject.tag == "tree") {
-           EndGame();
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "Level1")
+            {
+                SceneManager.LoadScene("Level2");
+            }
+            else if (scene.name == "Level2")
+            {
+                SceneManager.LoadScene("Level3");
+            }
+            else if (scene.name == "Level3")
+            {
+                SceneManager.LoadScene("Level4");
+            }
+            else if (scene.name == "Level4")
+            {
+                SceneManager.LoadScene("Level5");
+            }
+            else if (scene.name == "Level5")
+            {
+                EndGame();
+            }
         }
 
         if (Col.gameObject.tag == "star") {
