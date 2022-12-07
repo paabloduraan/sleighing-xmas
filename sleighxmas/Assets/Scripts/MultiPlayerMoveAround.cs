@@ -18,6 +18,8 @@ public class MultiPlayerMoveAround : MonoBehaviour {
       public Vector3 hvMove;
       public float jumpforce = 10f;
       public GameHandler gameHandlerObj;
+      public GameObject Santa;
+      public GameObject Grinch;
 
       void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
@@ -145,17 +147,22 @@ public class MultiPlayerMoveAround : MonoBehaviour {
             /*
             if (gameObject.transform.GetChild(0).CompareTag("grinch"))
             {
-                gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                transform.rotation = transform.localRotation;
+                Santa.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                Debug.Log("apple");
                 StartCoroutine(Freeze());
                 StopCoroutine(Freeze());
             }
             else if (gameObject.transform.GetChild(0).CompareTag("santa"))
             {
-                gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                transform.rotation = transform.localRotation;
+                Grinch.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+                Debug.Log("pear");
                 StartCoroutine(Freeze());
                 StopCoroutine(Freeze());
             }
             */
+            
       }
 
      }
@@ -164,8 +171,11 @@ public class MultiPlayerMoveAround : MonoBehaviour {
     IEnumerator Freeze()
     {
         yield return new WaitForSeconds(1f);
-        rb2D.constraints = RigidbodyConstraints2D.None;
+        rb2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        rb2D.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
     */
+
 
 }
