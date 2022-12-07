@@ -18,10 +18,13 @@ public class MultiPlayerMoveAround : MonoBehaviour {
       public Vector3 hvMove;
       public float jumpforce = 10f;
       public GameHandler gameHandlerObj;
+
       public GameObject Santa;
       public GameObject Grinch;
+      public float speedBoost = 20f;
+      public float speedLength = 20f;
 
-      void Start(){
+    void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
             if (GameObject.FindWithTag("GameHandler") != null) {
@@ -144,38 +147,32 @@ public class MultiPlayerMoveAround : MonoBehaviour {
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
 
-            /*
             if (gameObject.transform.GetChild(0).CompareTag("grinch"))
             {
                 transform.rotation = transform.localRotation;
-                Santa.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-                Debug.Log("apple");
-                StartCoroutine(Freeze());
-                StopCoroutine(Freeze());
+                Santa.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
             }
             else if (gameObject.transform.GetChild(0).CompareTag("santa"))
             {
                 transform.rotation = transform.localRotation;
-                Grinch.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-                Debug.Log("pear");
-                StartCoroutine(Freeze());
-                StopCoroutine(Freeze());
-            }
-            */
-            
+                Grinch.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
+            }  
       }
 
      }
 
-    /*
-    IEnumerator Freeze()
+    public void speedBoost(float speedBoost, float speedLength)
     {
-        yield return new WaitForSeconds(1f);
-        rb2D.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
-        rb2D.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
-        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+        runSpeed = runSpeed * speedBoost;
+        StartCoroutine(normalSpeed(speedLength));
     }
-    */
+
+    IEnumerator normalSpeed(float speedLength)
+    {
+        yield return new WaitForSeconds(speedLength);
+        runSpeed = startSpeed;
+    }
+
 
 
 }
