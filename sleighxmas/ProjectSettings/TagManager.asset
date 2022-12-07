@@ -14,6 +14,7 @@ TagManager:
   - grinch
   - santa
   - star
+  - PauseMenuSlider
   layers:
   - Default
   - TransparentFX
