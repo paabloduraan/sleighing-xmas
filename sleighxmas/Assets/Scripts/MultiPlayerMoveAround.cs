@@ -21,8 +21,6 @@ public class MultiPlayerMoveAround : MonoBehaviour {
 
       public GameObject Santa;
       public GameObject Grinch;
-      public float speedBoost = 20f;
-      public float speedLength = 20f;
 
     void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
@@ -146,17 +144,7 @@ public class MultiPlayerMoveAround : MonoBehaviour {
         if (Col.gameObject.tag == "star") {
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
-
-            if (gameObject.transform.GetChild(0).CompareTag("grinch"))
-            {
-                transform.rotation = transform.localRotation;
-                Santa.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
-            }
-            else if (gameObject.transform.GetChild(0).CompareTag("santa"))
-            {
-                transform.rotation = transform.localRotation;
-                Grinch.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
-            }  
+            speedBoost(1.5f, 6f); 
       }
 
      }
