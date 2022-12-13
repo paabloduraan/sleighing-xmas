@@ -120,5 +120,13 @@ public class GameHandler : MonoBehaviour
           SceneManager.LoadScene("Level1");
     }
 
+    public void Instructions() {
+          SceneManager.LoadScene("Instructions");
+    }
+
+    public void BackToStart() {
+          SceneManager.LoadScene("StartPage");
+    }
+
 
 }
