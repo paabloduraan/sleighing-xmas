@@ -101,9 +101,9 @@ public class MultiPlayerMoveAround : MonoBehaviour {
             gameObject.GetComponent<AudioSource>().Play();
 
             if (gameObject.transform.GetChild(0).CompareTag("grinch")) {
-                gameHandlerObj.AddScore2(1);
-            } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
                 gameHandlerObj.AddScore(1);
+            } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
+                gameHandlerObj.AddScore2(1);
             }
 
         }
@@ -113,9 +113,9 @@ public class MultiPlayerMoveAround : MonoBehaviour {
 
             //add 3 points to whoever reaches tree first
             if (gameObject.transform.GetChild(0).CompareTag("grinch")) {
-                gameHandlerObj.AddScore2(3);
-            } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
                 gameHandlerObj.AddScore(3);
+            } else if (gameObject.transform.GetChild(0).CompareTag("santa")) {
+                gameHandlerObj.AddScore2(3);
             }
 
             // switch to next scene
@@ -144,7 +144,7 @@ public class MultiPlayerMoveAround : MonoBehaviour {
         if (Col.gameObject.tag == "star") {
             Destroy(Col.gameObject);
             gameObject.GetComponent<AudioSource>().Play();
-            speedBoost(1.5f, 6f); 
+            speedBoost(1.5f, 6f);
       }
 
      }

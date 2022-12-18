@@ -11,8 +11,8 @@ public class GameHandler : MonoBehaviour
 
     public GameObject scoreText;
     public GameObject scoreText2;
-    private static int playerScore = 0;
-    private static int playerScore2 = 0;
+    public static int playerScore = 0;
+    public static int playerScore2 = 0;
     public static bool GameisPaused = false;
     public GameObject pauseMenuUI;
     public int count = 0;
