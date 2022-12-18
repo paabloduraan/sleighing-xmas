@@ -798,8 +798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2324fa55c930b4f41b0bed898bae5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1366679587}
-  scoreText2: {fileID: 402727837}
+  scoreText: {fileID: 402727837}
+  scoreText2: {fileID: 1366679587}
   pauseMenuUI: {fileID: 1397098210}
   count: 0
   mixer: {fileID: 24100000, guid: 95b8441fe3e584c3e92d55de2f4c7a04, type: 2}
@@ -1747,6 +1747,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pSpawn: {fileID: 1925243981}
+  gameHandlerObj: {fileID: 156829951}
+  Santa: {fileID: 916946031}
+  Grinch: {fileID: 247350995}
 --- !u!82 &247350997
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6489,6 +6492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pSpawn: {fileID: 1818878489}
+  gameHandlerObj: {fileID: 156829951}
+  Santa: {fileID: 916946031}
+  Grinch: {fileID: 247350995}
 --- !u!82 &916946033
 AudioSource:
   m_ObjectHideFlags: 0
