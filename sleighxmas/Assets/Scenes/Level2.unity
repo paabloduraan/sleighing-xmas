@@ -1020,6 +1020,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 1135174353}
   count: 0
   mixer: {fileID: 24100000, guid: 95b8441fe3e584c3e92d55de2f4c7a04, type: 2}
+  winner: 1
 --- !u!1 &181466951
 GameObject:
   m_ObjectHideFlags: 0
@@ -7998,7 +7999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866690713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 19.58, z: 0}
+  m_LocalPosition: {x: 12.8, y: 26.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
