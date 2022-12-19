@@ -19,6 +19,7 @@ public class GameHandler : MonoBehaviour
     public AudioMixer mixer;
     public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
+    public bool winner = true;
 
 
     void Start()
@@ -128,5 +129,8 @@ public class GameHandler : MonoBehaviour
           SceneManager.LoadScene("StartPage");
     }
 
-
+    public void higherScore() {
+          if (playerScore > playerScore2) {winner = true;}
+          else {winner = false;};
+    }
 }

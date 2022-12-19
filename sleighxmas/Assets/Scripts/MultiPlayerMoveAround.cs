@@ -87,7 +87,13 @@ public class MultiPlayerMoveAround : MonoBehaviour {
       }
 
       public void EndGame() {
-            SceneManager.LoadScene("EndPage");
+          gameHandlerObj.higherScore();
+           if (gameHandlerObj.winner){
+               SceneManager.LoadScene("GrinchWin");
+           }
+           else{
+               SceneManager.LoadScene("SantaWin");
+           }
       }
 
       void OnCollisionEnter2D(Collision2D Col)
