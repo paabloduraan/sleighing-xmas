@@ -3088,13 +3088,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2_grinch
       objectReference: {fileID: 0}
+    - target: {fileID: 7856597883301396899, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1144141295, guid: f11a764de4e534d2eb55d524b4b2d296, type: 3}
     - target: {fileID: 9007171857184753534, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9007171857184753534, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9007171857184753534, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_LocalScale.z
@@ -3106,7 +3110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9007171857184753534, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9066390563962317502, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_Name
@@ -3245,6 +3249,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &247351001
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247350995}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67084b81bb1454eac94f75788a1fb0d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &263453091
 GameObject:
   m_ObjectHideFlags: 0
