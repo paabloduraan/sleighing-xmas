@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Collections;
+using System;
 using UnityEngine;
 
 public class PlayerMeleeAttack : MonoBehaviour{
@@ -12,22 +13,27 @@ public class PlayerMeleeAttack : MonoBehaviour{
       public int attackDamage = 40;
       public LayerMask enemyLayers;
       public GameHandler gameHandlerObj;
+      public Animator grinch;
+      public Animator santa;
 
       void Start(){
-           //animator = gameObject.GetComponentInChildren<Animator>();
+           grinch = gameObject.GetComponentInChildren<Animator>();
       }
 
       void Update(){
            if (Time.time >= nextAttackTime){
                   //if (Input.GetKeyDown(KeyCode.Space))
                  if (Input.GetAxis("Attack") > 0){
+                        grinch.SetTrigger("punch");
                         Attack();
                         nextAttackTime = Time.time + 1f / attackRate;
                   }
                   if (Input.GetAxis("Attack2") > 0){
+                        santa.SetTrigger("punch-san");
                          Attack2();
                          nextAttackTime = Time.time + 1f / attackRate;
                    }
+
             }
       }
 
@@ -45,7 +51,7 @@ public class PlayerMeleeAttack : MonoBehaviour{
                 //  enemy.GetComponent<EnemyMeleeDamage>().TakeDamage(attackDamage);
             }
       }
-      
+
       //santa attacks grinch
       void Attack2(){
             //animator.SetTrigger ("Melee");

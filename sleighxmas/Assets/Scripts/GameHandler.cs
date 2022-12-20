@@ -138,5 +138,7 @@ public class GameHandler : MonoBehaviour
     public void higherScore() {
           if (playerScore > playerScore2) {winner = true;}
           else {winner = false;};
+          playerScore = 0;
+          playerScore2 = 0;
     }
 }
