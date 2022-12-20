@@ -10,7 +10,7 @@ public class MultiPlayerMoveAround : MonoBehaviour {
       public int jumpcount = 0;
       public int maxJumpCount = 1;
       public Rigidbody2D rb2D;
-      private bool FaceRight = true; // determine which way player is facing.
+      private bool FaceRight = false; // determine which way player is facing.
       public static float runSpeed = 10f;
       public float startSpeed = 10f;
       public bool isAlive = true;
