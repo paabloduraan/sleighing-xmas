@@ -1932,6 +1932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2_grinch
       objectReference: {fileID: 0}
+    - target: {fileID: 7781566256707147116, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9007171857184753534, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -1955,6 +1959,10 @@ PrefabInstance:
     - target: {fileID: 9066390563962317502, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_Name
       value: grinchArt
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066390563962317502, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9066390563962317502, guid: be50e69e6193c40fc937967d2e97ca38, type: 3}
       propertyPath: m_TagString
@@ -2089,6 +2097,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &247350998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247350995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d166dd63bb4944ac93d762d3d035a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPt: {fileID: 1164376793}
+  attackRange: 0.5
+  attackRate: 2
+  attackDamage: 40
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  gameHandlerObj: {fileID: 156829951}
 --- !u!1 &263453091
 GameObject:
   m_ObjectHideFlags: 0
@@ -5897,6 +5925,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8623619448249494274, guid: 569b2e11e91d84170b679fac8b604730, type: 3}
   m_PrefabInstance: {fileID: 8623619447275166571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &878236783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 878236784}
+  m_Layer: 3
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &878236784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878236783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.75, y: 0.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 916946029}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &883891595
 GameObject:
   m_ObjectHideFlags: 0
@@ -6601,9 +6660,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1_santa
       objectReference: {fileID: 0}
+    - target: {fileID: 1103546417135393578, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1103546418772793593, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955164796297464430, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6955164796297464430, guid: 3d8ec7918668b4c778f65ca053078a8c, type: 3}
       propertyPath: m_TagString
@@ -6682,7 +6749,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0420046
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -6758,6 +6825,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &916946037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916946031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d166dd63bb4944ac93d762d3d035a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPt: {fileID: 878236784}
+  attackRange: 0.5
+  attackRate: 2
+  attackDamage: 40
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  gameHandlerObj: {fileID: 156829951}
 --- !u!1 &921888746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8319,6 +8406,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1164376792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164376793}
+  m_Layer: 3
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164376793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164376792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.46, y: 0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 247350993}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173327892
 GameObject:
   m_ObjectHideFlags: 0

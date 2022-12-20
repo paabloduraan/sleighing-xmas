@@ -41,6 +41,9 @@ public class GameHandler : MonoBehaviour
     public void AddScore(int points)
     {
         playerScore += points;
+        if (playerScore < 0) {
+            playerScore = 0;
+        }
         UpdateScore();
     }
 
@@ -53,6 +56,9 @@ public class GameHandler : MonoBehaviour
     public void AddScore2(int points)
     {
         playerScore2 += points;
+        if (playerScore2 < 0) {
+            playerScore2 = 0;
+        }
         UpdateScore2();
     }
 
