@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SantaWin.unity
     guid: ddad09ff070454779a9de6531b23659e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c23a367109e184c2f83ac513fd411f4d
   m_configObjects: {}

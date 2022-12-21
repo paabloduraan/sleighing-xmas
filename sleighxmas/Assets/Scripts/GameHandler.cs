@@ -131,6 +131,10 @@ public class GameHandler : MonoBehaviour
           SceneManager.LoadScene("Instructions");
     }
 
+    public void Credits() {
+          SceneManager.LoadScene("Credits");
+    }
+
     public void BackToStart() {
           SceneManager.LoadScene("StartPage");
     }
