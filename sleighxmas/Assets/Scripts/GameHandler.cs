@@ -100,7 +100,7 @@ public class GameHandler : MonoBehaviour
     public void RestartGame(){
                Time.timeScale = 1f;
                // Add commands to zero-out any scores or other stats before restarting
-               SceneManager.LoadScene("Level1");
+               SceneManager.LoadScene("StartPage");
     }
 
     void Pause(){
