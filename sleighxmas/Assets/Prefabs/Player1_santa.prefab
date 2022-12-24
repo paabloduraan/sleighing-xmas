@@ -260,6 +260,9 @@ MonoBehaviour:
   gameHandlerObj: {fileID: 0}
   grinch: {fileID: 0}
   santa: {fileID: 7536489215589286132}
+  player1: {fileID: 2439038413982342669}
+  player2: {fileID: 5037802289124773339, guid: 25c4393891ed7446b843753b0f1d87c5, type: 3}
+  treePrefab: {fileID: 1086807100641975180, guid: 2c98f22ab6634449e89f0736e04b7620, type: 3}
 --- !u!1 &3353388544731000100
 GameObject:
   m_ObjectHideFlags: 0

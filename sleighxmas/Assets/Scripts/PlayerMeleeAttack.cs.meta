@@ -3,7 +3,14 @@ guid: 8d166dd63bb4944ac93d762d3d035a70
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - attackPt: {instanceID: 0}
+  - gameHandlerObj: {instanceID: 0}
+  - grinch: {instanceID: 0}
+  - santa: {instanceID: 0}
+  - player1: {fileID: 2439038413982342669, guid: f05c5683e0da8463aa99e3ec25ce0570, type: 3}
+  - player2: {fileID: 5037802289124773339, guid: 25c4393891ed7446b843753b0f1d87c5, type: 3}
+  - treePrefab: {fileID: 1086807100641975180, guid: 2c98f22ab6634449e89f0736e04b7620, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
