@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System;
 using UnityEngine;
+using UnityEditor;
 
 public class PlayerMeleeAttack : MonoBehaviour{
 
@@ -15,9 +16,16 @@ public class PlayerMeleeAttack : MonoBehaviour{
       public GameHandler gameHandlerObj;
       public Animator grinch;
       public Animator santa;
+      public GameObject player1;
+      public GameObject player2;
+      public GameObject treePrefab;
+      private dropItem itemDrop;
+
 
       void Start(){
            grinch = gameObject.GetComponentInChildren<Animator>();
+           itemDrop = GetComponent<dropItem>();
+           Debug.Log(GetNonSceneObjects());
       }
 
       void Update(){
@@ -46,7 +54,13 @@ public class PlayerMeleeAttack : MonoBehaviour{
                   Debug.Log("We hit " + enemy.name);
 
                  if (enemy.name == "Player1_santa") {
-                      gameHandlerObj.AddScore2(-2);
+                      gameHandlerObj.AddScore2(-1);
+                      itemDrop.SantaDropItem();
+                      // Instantiate(treePrefab, new Vector3(
+                      //     (player1.transform.position.x),
+                      //     (player1.transform.position.y + 4), 
+                      //     (player1.transform.position.z)),
+                      //  Quaternion.identity);
                   }
                 //  enemy.GetComponent<EnemyMeleeDamage>().TakeDamage(attackDamage);
             }
@@ -61,8 +75,8 @@ public class PlayerMeleeAttack : MonoBehaviour{
                   Debug.Log("We hit " + enemy.name);
 
                   if (enemy.name == "Player2_grinch") {
-                      gameHandlerObj.AddScore(-2);
-
+                      gameHandlerObj.AddScore(-1);
+                      itemDrop.GrinchDropItem();
                   }
                 //  enemy.GetComponent<EnemyMeleeDamage>().TakeDamage(attackDamage);
             }
@@ -73,4 +87,18 @@ public class PlayerMeleeAttack : MonoBehaviour{
            if (attackPt == null) {return;}
             Gizmos.DrawWireSphere(attackPt.position, attackRange);
       }
+      
+      List<GameObject> GetNonSceneObjects()
+    {
+        List<GameObject> objectsInScene = new List<GameObject>();
+
+        foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+        {
+            if (EditorUtility.IsPersistent(go.transform.root.gameObject) && !(go.hideFlags == HideFlags.NotEditable || go.hideFlags == HideFlags.HideAndDontSave))
+                objectsInScene.Add(go);
+        }
+
+        return objectsInScene;
+    }
+    
 }
