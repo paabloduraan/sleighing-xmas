@@ -20,6 +20,7 @@ public class GameHandler : MonoBehaviour
     public static float volumeLevel = 1.0f;
     private Slider sliderVolumeCtrl;
     public bool winner = true;
+    private dropItem itemDrop;
 
 
     void Start()
@@ -28,6 +29,7 @@ public class GameHandler : MonoBehaviour
         UpdateScore2();
         pauseMenuUI.SetActive(false);
         GameisPaused = false;
+        itemDrop = GetComponent<dropItem>();
     }
 
     void Awake (){
@@ -38,12 +40,17 @@ public class GameHandler : MonoBehaviour
                        sliderVolumeCtrl.value = volumeLevel;
                }
        }
+
+    // grinch
     public void AddScore(int points)
     {
+        if (points < 0 && playerScore > 0) { itemDrop.GrinchDropItem(); }
+
         playerScore += points;
-        if (playerScore < 0) {
+        if (playerScore <= 0) {
             playerScore = 0;
         }
+
         UpdateScore();
     }
 
@@ -53,12 +60,17 @@ public class GameHandler : MonoBehaviour
         scoreTextB.text = "" + playerScore;
     }
 
+    // santa
     public void AddScore2(int points)
     {
+        if (points < 0 && playerScore2 > 0) { itemDrop.SantaDropItem(); }
+
         playerScore2 += points;
+
         if (playerScore2 < 0) {
             playerScore2 = 0;
         }
+
         UpdateScore2();
     }
 
